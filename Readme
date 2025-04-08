@@ -1,0 +1,48 @@
+URL Shortener with EJS, Express.js, MongoDB Atlas, and JWT
+This project is a URL shortener built with EJS, Express.js, MongoDB Atlas, and JWT for authentication.
+
+Features
+Users can register and log in.
+
+Users can shorten URLs.
+
+JWT is used for secure authentication and authorization.
+
+User data and shortened URLs are stored in MongoDB Atlas.
+
+The frontend is dynamically rendered using EJS templates.
+
+Tech Stack
+Backend: Express.js
+
+Frontend: EJS, HTML, CSS
+
+Database: MongoDB Atlas
+
+Authentication: JWT (JSON Web Tokens)
+
+Setup Instructions
+Clone the repository:
+
+bash
+Copy
+git clone https://github.com/harhit-1000/URL-Shortner.git
+cd URL-Shortner
+Install dependencies:
+
+bash
+Copy
+npm install
+Create a .env file with your MongoDB connection string and JWT secret:
+
+plaintext
+Copy
+MONGODB_URI=your_mongodb_atlas_connection_string
+JWT_SECRET=your_jwt_secret_key
+PORT=3000
+Start the server:
+
+bash
+Copy
+npm start
+Open your browser and go to http://localhost:3000.
