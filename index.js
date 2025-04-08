@@ -6,12 +6,14 @@ const app = express();
 const PORT = 8001;
 const cookieParser = require('cookie-parser');
 const  {restrictTo, checkForAuthentication} = require('./middleware/auth');
+require('dotenv').config();
+const mongo_url = process.env.mongo_url;
 
 const urlRoute = require("./routes/url");
 const staticRoute = require('./routes/staticRouter');
 const userRoute = require('./routes/user');
 
-connectToMongoDB('mongodb+srv://harshitredcolour:h11111111@cluster0.kchgw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+connectToMongoDB(mongo_url);
 app.set("view engine","ejs");
 app.set('views', Path.resolve("./views"))
 app.use(express.json());

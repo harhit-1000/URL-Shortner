@@ -1,5 +1,7 @@
+require('dotenv').config();
+const jwt_secret = process.env.jwt_secret;
 const jwt = require('jsonwebtoken');
-const secret = "harshit@123";
+const secret = jwt_secret;
 function setUser(user) {
   return jwt.sign( {
     id : user._id,
